@@ -37,6 +37,11 @@ module Savon
       raise_invalid_response_error! unless hash.key? :envelope
       hash[:envelope][:body]
     end
+    
+    def status
+      raise_invalid_response_error! unless hash.key? :envelope
+      hash[:envelope][:code]
+    end
     alias to_hash body
 
     def to_array(*path)
