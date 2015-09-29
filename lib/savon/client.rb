@@ -25,7 +25,7 @@ module Savon
 
     def operations
       raise_missing_wsdl_error! unless @wsdl.document?
-      @wsdl.soap_actions
+      @wsdl.operations
     end
 
     def operation(operation_name)
